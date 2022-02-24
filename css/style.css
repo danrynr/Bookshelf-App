@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Recursive', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #7614ff;
+    padding: 18px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper .container {
+    width: 1024px;
+    flex-grow: 1;
+    background: #f4f0ff;
+    margin: 16px;
+    padding: 24px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.book {
+    border-radius: 16px;
+    margin-top: 16px;
+    padding: 12px 24px;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+    
+.form {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    border-radius: 16px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input label {
+    margin-bottom: 6px;
+    font-size: 18px;
+}
+
+.form-input input {
+    height: 60px;
+    width: auto;
+    border-radius: 16px;
+}
+input[type=number],
+input[type=text] {
+    background: #f0e6ff;
+    box-sizing: border-box;
+    font-size: 24px;
+    padding: 16px;
+    margin-bottom: 8px;
+    border: 2px solid #7614ff;
+}
+
+input[type=number]:focus,
+input[type=text]:focus {
+    outline: none;
+    transition: 1s;
+    border: 2px solid #7614ff;
+    box-shadow: 0 0 10px #c499ff;
+}
+
+.input_check {
+    margin-bottom: 8px;
+    padding: 12xp 24px;
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #7614ff;
+}
+
+input[type=checkbox]:checked {
+    background: #7614ff;
+}
+
+.btn-submit, .btn-search {
+    width: fit-content;
+    padding: 12px 24px;
+    margin-top: 14px;
+    border: none;
+    border-radius: 16px;
+    border: 2px solid #7614ff;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.btn-submit:hover, .btn-search:hover {
+    transition: .2s;
+    background: #7614ff;
+    color: white;
+}
+
+.btn-submit:focus, .btn-search:focus {
+    outline: none;
+}
+
+.form-title {
+    margin: 0;
+}
+
+.item {
+    border-radius: 16px;
+    margin-top: 16px;
+    padding: 24px 24px 12px 24px;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+
+.inner {
+    width: 50%;
+}
+
+.item > .inner h2 {
+    margin-top: unset;
+}
+
+.item > .inner > p {
+    margin-top: 6px;
+}
+
+.item > .inner > i {
+    margin-top: 6px;
+}
+
+.item > .inner > .h6 {
+    margin-top: 6px;
+}
+
+.check-button {
+    background: url('../assets/check-svgrepo-com.svg');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.check-button:hover {
+    animation: jump .5s ease-in-out infinite;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.undo-button {
+    background: url('../assets/undo-svgrepo-com.svg');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.undo-button:hover {
+    animation: rotate .8s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.trash-button {
+    background: url('../assets/trash-svgrepo-com.svg');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.trash-button:hover {
+    animation: shake .5s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px,1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg);}  
+    30% { transform: translate(4px, 2px) rotate(3deg);}
+    40% { transform: translate(-5px, -2px) rotate(-2deg);}
+    50% { transform: translate(-3px, 3px) rotate(1deg);}
+    60% { transform: translate(2px, -1px) rotate(0deg);}
+    70% { transform: translate(-1px, 2px) rotate(-1deg);}
+    80% { transform: translate(1px, -2px) rotate(2deg);}
+    90% { transform: translate(-1px, 1px) rotate(0deg);}
+    100% { transform: translate(1px, -1px) rotate(-1deg);}
+}
+
+.shadow {
+    box-shadow: 0 5px 10px rgba(154, 160, 200, .05), 0 15px 40px rgba(188, 173, 250, .2);
+}
+
+@media only screen and (max-width: 1024px) {
+    .wrapper {
+        margin: 0;
+    }
+
+    .wrapper .container {
+        width: 100%;
+    }
+
+    .list-item {
+        width: 90%;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+}
